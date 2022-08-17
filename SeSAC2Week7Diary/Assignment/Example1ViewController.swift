@@ -48,7 +48,7 @@ class Example1ViewController: UIViewController {
        let view = UIButton()
         view.setTitle(nil, for: .normal)
         view.setImage(UIImage(systemName: "gearshape.circle"), for: .normal)
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .clear
         view.tintColor = .white
         return view
     }()
@@ -57,7 +57,7 @@ class Example1ViewController: UIViewController {
         let view = UIButton()
         view.setTitle(nil, for: .normal)
         view.setImage(UIImage(systemName: "gearshape.circle"), for: .normal)
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .clear
         view.tintColor = .white
         return view
     }()
@@ -66,13 +66,13 @@ class Example1ViewController: UIViewController {
         let view = UIButton()
         view.setTitle(nil, for: .normal)
         view.setImage(UIImage(systemName: "gearshape.circle"), for: .normal)
-        view.backgroundColor = .systemBlue
+        view.backgroundColor = .clear
         view.tintColor = .white
         return view
     }()
     
     let chatButton: UIButton = {
-        var configuration = UIButton.Configuration.plain()
+        var configuration = UIButton.Configuration.tinted()
         configuration.image = UIImage(systemName: "message.fill")
         configuration.imagePlacement = .top
         configuration.imagePadding = 15
@@ -86,7 +86,7 @@ class Example1ViewController: UIViewController {
     }()
     
     let editButton: UIButton = {
-        var configuration = UIButton.Configuration.plain()
+        var configuration = UIButton.Configuration.tinted()
         configuration.image = UIImage(systemName: "pencil")
         configuration.imagePadding = 15
         configuration.imagePlacement = .top
@@ -100,7 +100,7 @@ class Example1ViewController: UIViewController {
     }()
     
     let storyButton: UIButton = {
-        var configuration = UIButton.Configuration.plain()
+        var configuration = UIButton.Configuration.tinted()
         configuration.image = UIImage(systemName: "book.fill")
         configuration.imagePadding = 15
         configuration.imagePlacement = .top
@@ -204,7 +204,8 @@ class Example1ViewController: UIViewController {
             make.leading.equalTo(self.view.safeAreaLayoutGuide.snp.leading).offset(40)
             make.trailing.equalTo(self.view.safeAreaLayoutGuide.snp.trailing).offset(-40)
             make.top.equalTo(horizontalView.snp.bottom).offset(20)
-            make.height.equalTo(70)
+            make.height.equalTo(80)
+            make.bottom.greaterThanOrEqualTo(self.view.safeAreaLayoutGuide.snp.bottom).offset(-20)
             
         }
     }
